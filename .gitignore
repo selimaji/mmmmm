@@ -5,7 +5,6 @@
 /public/storage
 /storage/*.key
 /vendor
-.env
 .env.backup
 .env.production
 .phpactor.json
@@ -18,4 +17,3 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-vite.config.js
