@@ -44,7 +44,6 @@ class MaizzleConverter
         $process = new Process([$this->nodePath, $this->maizzlePath, $title, $preheader, $content, $bodyClass]);
 
         try {
-
             if (config('mailifyflow.node_path') == null) {
                 throw new \Exception('Node.js path not set in config/mailifyflow.php');
             }
