@@ -345,8 +345,9 @@ class CampaignResource extends Resource
             }
 
             // Create jobs for the selected subscribers
+            $delay = 6;
             foreach ($subscribersWithCommonTags as $key => $subscriber) {
-                $jobs[] = (new CampaignJob($campaign, $subscriber))->delay(now()->addMinutes($key));
+                $jobs[] = (new CampaignJob($campaign, $subscriber))->delay(now()->addSeconds($key * $delay));
             }
 
             $recipient = auth()->user();
